@@ -1,0 +1,74 @@
+{% extends 'teacher/dash.html' %}
+{% block content %}
+
+
+
+<!--<form method ='post' enctype="multipart/form-data">-->
+<!--    {% csrf_token %}-->
+<!--       {% for i in data %}-->
+<!--    <div style="margin-top:50px;margin-left:30px;color:black;">-->
+
+<!--  <ul class="list-group list-group-flush">-->
+<!--      <li><div><img style="height: 170px;width: 160px;" src="{{i.image.url}}" ></div></li>&nbsp;-->
+<!--    <li class="list-group-item">Name : {{i.name}}</li>-->
+<!--    <li class="list-group-item">Teacher id : {{i.tid}}</li>-->
+<!--    <li class="list-group-item">Gender : {{i.gender}}</li>-->
+<!--    <li class="list-group-item">Age : {{i.age}}</li>-->
+<!--    <li class="list-group-item">Address : {{i.address}}</li>-->
+<!--    <li class="list-group-item">Phone number : {{i.phone}} </li>-->
+<!--    <li class="list-group-item">Subject : {{i.subject}}</li>-->
+
+<!-- <a class="btn btn-primary" href="{% url 'tprofileupdate' i.id %}">UPDATE</a>-->
+<!--  </ul>-->
+<!--  </div>-->
+<!-- {% endfor %}-->
+<!--</form><br><br>-->
+
+<div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
+                    <div class="bg-white rounded shadow position-relative" style="z-index: 1;width:400px;">
+                        <div class="border-bottom py-4 px-5 mb-4">
+                            <h4 class="text-primary mb-1">Profile</h4>
+
+                        </div>
+<!--                        <div class="p-5 pt-0">-->
+<!--                            <h1 class="display-5 mb-3">-->
+<!--                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>99.00<small-->
+<!--                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>-->
+<!--                            </h1>-->
+
+                            <form method ='post' enctype="multipart/form-data">
+    {% csrf_token %}
+       {% for i in data %}
+    <div style="margin-top:50px;margin-left:30px;color:black;">
+
+  <ul class="list-group list-group-flush">
+      <li><div><img style="height: 170px;width: 160px;" src="{{i.image.url}}" ></div></li>&nbsp;
+    <li class="list-group-item">Name : {{i.name}}</li>
+    <li class="list-group-item">Teacher id : {{i.tid}}</li>
+    <li class="list-group-item">Gender : {{i.gender}}</li>
+    <li class="list-group-item">Age : {{i.age}}</li>
+    <li class="list-group-item">Address : {{i.address}}</li>
+    <li class="list-group-item">Phone number : {{i.phone}} </li>
+    <li class="list-group-item">Subject : {{i.subject}}</li>
+
+ <a class="btn btn-primary" href="{% url 'tprofileupdate' i.id %}">UPDATE</a>
+  </ul>
+  </div>
+ {% endfor %}
+</form><br><br>
+
+
+
+
+
+
+<!--                            <div class="d-flex justify-content-between mb-3"><span>HTML5 & CSS3</span></div>-->
+<!--                            <div class="d-flex justify-content-between mb-3"><span>Bootstrap v5</span></div>-->
+<!--                            <div class="d-flex justify-content-between mb-3"><span>Responsive Layout</span></div>-->
+<!--                            <div class="d-flex justify-content-between mb-2"><span>Cross-browser Support</span></div>-->
+<!--                            <a href="" class="btn btn-primary py-2 px-4 mt-4">Order Now</a>-->
+                        </div>
+                    </div>
+                </div>
+
+{% endblock %}
